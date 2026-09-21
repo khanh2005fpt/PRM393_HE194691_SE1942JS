@@ -33,11 +33,10 @@ class CoreWidgetsDemo extends StatelessWidget {
                 child: const Icon(Icons.movie, size: 64, color: Colors.blue),
               ),
             ),
-            const SizedBox(height: 24),
 
             ClipRRect(
               child: Image.asset(
-                'image/images.jpg',
+                'assets/image/images.jpg',
                 height: 400,
                 width: double.infinity,
                 fit: BoxFit.cover
