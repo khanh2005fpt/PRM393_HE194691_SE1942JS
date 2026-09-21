@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+
+class ProductWidget extends StatelessWidget {
+  const ProductWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        // Sắp xếp giao diện theo chiều dọc
+        children: [
+          // Ảnh của sản phẩm
+          SizedBox(
+            width: 300,
+            height: 300,
+            child: Image.asset(
+              "assets/image/IMG_1588.PNG",
+              fit: BoxFit.cover,
+            ),
+          ),
+
+          Card(
+            child: Column(
+              children: [
+                const Text("Name: o to bay"),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Price: "),
+                    const Text(
+                      "Old: 30\$",
+                      style: TextStyle(color: Colors.blue),
+                    ),
+                    const Text(
+                      "Sale: 20\$",
+                      style: TextStyle(color: Colors.red),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
